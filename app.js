@@ -95,16 +95,26 @@ async function loadSummary() {
     }
   });
 
+  let totalSemua = 0;
   let html = "<ul class='list-group'>";
   for (const dompet in saldo) {
+    totalSemua += saldo[dompet]; // Tambahkan saldo per dompet ke total
     html += `<li class="list-group-item d-flex justify-content-between">
       <span>${dompet}</span><strong>${formatRupiah(saldo[dompet])}</strong>
     </li>`;
   }
   html += "</ul>";
 
+  // Tambahkan total keseluruhan di bawah daftar dompet
+  html += `
+    <div class="alert alert-success mt-3">
+      <strong>Total Saldo Keseluruhan:</strong> ${formatRupiah(totalSemua)}
+    </div>
+  `;
+
   document.getElementById("summary").innerHTML = html;
 }
+
 
 // ========== RIWAYAT TRANSAKSI ========== //
 async function loadTransaksi() {
