@@ -1,6 +1,6 @@
 {
-  "name": "Pencatatan Uang",
-  "short_name": "CatatUang",
+  "name": "Kasflow Catatan Keungan",
+  "short_name": "KasFlow",
   "description": "Aplikasi pencatatan pemasukan dan pengeluaran harian.",
   "start_url": "./index.html",
   "display": "standalone",
